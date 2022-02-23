@@ -1,0 +1,10 @@
+org\uv\app\HibernateUtil.class
+org\uv\model\Empleados.class
+org\uv\model\Departamentos.class
+org\uv\dao\factoryDao$DAOTYPE.class
+org\uv\dao\factoryDao.class
+org\uv\dao\factoryDao$1.class
+org\uv\dao\Main.class
+org\uv\dao\daoDepartamento.class
+org\uv\dao\daoEmpleado.class
+org\uv\dao\Idao.class
