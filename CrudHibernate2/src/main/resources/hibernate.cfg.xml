@@ -21,9 +21,11 @@
         <!-- Annotated entity classes -->
         <mapping class="org.uv.model.Empleados"/>
         <mapping class="org.uv.model.Departamentos"/>
+        <mapping class="org.uv.app.HibernateUtil"/>
         <mapping class="org.uv.dao.daoEmpleado"/>
         <mapping class="org.uv.dao.daoDepartamento"/>
-        <mapping class="org.uv.app.HibernateUtil"/>
+        <mapping class="org.uv.dao.factoryDao"/>
+        <mapping class="org.uv.dao.Idao"/>
         
     </session-factory>
 </hibernate-configuration>

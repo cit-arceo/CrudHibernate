@@ -1,7 +1,7 @@
 org\uv\app\HibernateUtil.class
 org\uv\model\Empleados.class
+org\uv\dao\factoryDao$TYPE.class
 org\uv\model\Departamentos.class
-org\uv\dao\factoryDao$DAOTYPE.class
 org\uv\dao\factoryDao.class
 org\uv\dao\factoryDao$1.class
 org\uv\dao\Main.class

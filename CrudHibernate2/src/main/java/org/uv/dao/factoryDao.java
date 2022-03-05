@@ -5,9 +5,9 @@ package org.uv.dao;
  * @author citla
  */
 public class factoryDao {
-    public enum DAOTYPE{EMPLEADOS,DEPARTAMENTOS}
+    public enum TYPE{EMPLEADOS,DEPARTAMENTOS}
     
-    public static Idao getDao(DAOTYPE t){
+    public static Idao getDao(TYPE t){
         Idao dao = null;
         switch(t){
             case EMPLEADOS:

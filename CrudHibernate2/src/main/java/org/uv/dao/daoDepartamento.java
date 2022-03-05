@@ -70,6 +70,7 @@ public class daoDepartamento implements Idao <Departamentos>{
     @Override
     public List<Departamentos> readAll() {
         session = sessionFactory.openSession();
+        session.beginTransaction();
         
         Query query = session.createQuery("from departamentos"); 
         

@@ -1,10 +1,14 @@
 package org.uv.dao;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 import org.uv.app.HibernateUtil;
+import org.uv.model.Departamentos;
 import org.uv.model.Empleados;
 
 /**
@@ -70,6 +74,7 @@ public class daoEmpleado implements Idao<Empleados>{
     @Override
     public List<Empleados> readAll() {
         session = sessionFactory.openSession();
+        session.beginTransaction();
         
         Query query = session.createQuery("from empleados"); 
         

@@ -1,8 +1,10 @@
 package org.uv.dao;
 
+import java.util.Collection;
 import java.util.List;
-import org.uv.model.Empleados;
 import org.uv.model.Departamentos;
+import org.uv.model.Empleados;
+
 
 /**
  *
@@ -10,31 +12,36 @@ import org.uv.model.Departamentos;
  */
 public class Main {
     public static void main(String args[]) {
-        Idao dao = factoryDao.getDao(factoryDao.DAOTYPE.EMPLEADOS);
-        daoEmpleado empDao = new daoEmpleado();
+        Idao empDao = factoryDao.getDao(factoryDao.TYPE.EMPLEADOS);
+        Idao depaDao = factoryDao.getDao(factoryDao.TYPE.DEPARTAMENTOS);
         Empleados emp = new Empleados();
+        Departamentos depto = new Departamentos();
         
-
-        emp.setNombre("Eva");
-        emp.setDireccion("Cordoba");
-        emp.setTelefono("123");
-        emp.setClave(1);
-        System.out.println(empDao.update(emp));
+//        depto.setClave(4);
+        depto.setNombre("Logistica");
         
-//        System.out.println("Se agrego con etsito...");
-//        System.out.println("Se elimino con etsito...");
-        System.out.println("Se actualizo con etsito...");
+//        emp.setClave(5);
+        emp.setNombre("Alfredo");
+        emp.setDireccion("Jalcomulco");
+        emp.setTelefono("1234589415");
+        emp.setDepartamentos(depto);
+//        emp.setClave(5);
+        
+        System.out.println(depaDao.insert(depto));
 
 //Mostrar uno        
-//        Empleados empleado = (Empleados) dao.readOne(1);
+//        Empleados empleado = (Empleados) empDao.readOne(emp);
 //        System.out.println(empleado.getClave() + " " +  empleado.getNombre());
-        
+//        Departamentos departamento = (Departamentos) dao.readOne(dep);
+//        System.out.println(departamento.getClave() + " " + departamento.getNombre());
 //Mostrar todos        
-//        List<Empleados> registros  = dao.readAll();
-//        
-//        for(Empleados empleado : registros ){
+//        List<Empleados> lista = empDao.readAll();
+
+//        for(Empleados empleado : lista ){
 //            System.out.println(empleado.getClave() + " " + empleado.getNombre()
-//                    + " " + empleado.getDireccion() + " " + empleado.getTelefono());
-//        }
+//                    + " " + empleado.getDireccion() + " " + empleado.getTelefono() 
+//                    + " " );
+//        } 
+        
     }
 }
